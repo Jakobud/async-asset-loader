@@ -9,19 +9,19 @@
 <script>
 
 asyncAssetLoader([{
-  path: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js',
+  url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js',
   complete: function(){
     console.log('jquery loaded');
   },
   deps: [
     {
-      path: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js',
+      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js',
       complete: function(){
         console.log('Isotope loaded');
       }
     },
     {
-      path: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js',
+      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js',
       complete: function(){
         console.log('Jquery Cookie Loaded');
       }

@@ -24,9 +24,8 @@ var asyncAssetLoader = function(assets) {
 
   var loadAssets = function(assets) {
     for (var index in assets) {
-
-      if (typeof(assets[index].path !== 'undefined')) {
-        importScript(assets[index].path, assets[index].complete, assets[index].deps);
+      if (typeof(assets[index].url !== 'undefined')) {
+        importScript(assets[index].url, assets[index].complete, assets[index].deps);
       }
     }
   }
