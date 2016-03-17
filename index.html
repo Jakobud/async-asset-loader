@@ -9,27 +9,45 @@
 <script>
 
 asyncAssetLoader([{
-  url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js',
+  urls: ['https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js'
+  ],
   complete: function(){
-    console.log('jquery loaded');
+    console.log('First scripts loaded');
   },
   deps: [
     {
-      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js',
+      urls: ['https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js'],
       complete: function(){
         console.log('Isotope loaded');
       }
     },
     {
-      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js',
+      urls: ['https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js'],
       complete: function(){
         console.log('Jquery Cookie Loaded');
       }
     }
   ]
-}]);
+},
+{
+  urls: ['https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js'],
+  complete: function() {
+    console.log('snap.svg loaded');
+  }
+}
+
+]);
 
 </script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script> -->
 
 </body>
 </html>
